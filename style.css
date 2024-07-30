@@ -48,14 +48,13 @@ nav ul li a {
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
-  transition: all .3s;
+  transition: all 0.3s;
 }
 nav ul li a:hover {
   color: #dadada;
 }
 
-
-nav ul li a{
+nav ul li a {
   position: relative;
 }
 
@@ -66,7 +65,7 @@ nav ul li a:after {
   right: 0;
   margin: auto;
   width: 0%;
-  content: '.';
+  content: ".";
   color: transparent;
   background: #aaa;
   height: 1px;
@@ -121,7 +120,7 @@ main {
   border-radius: 6px;
 }
 
-#new-quote:hover{
+#new-quote:hover {
   background-color: #1045d6;
 }
 
@@ -148,11 +147,39 @@ main {
   color: #1045d6;
 }
 
-.copy-message{
+.copy-message {
   font-size: 14px;
 }
 
-.footline{
-    text-align: center;
-    font-size: 14px;
+.footline {
+  text-align: center;
+  font-size: 14px;
+}
+
+/*About section CSS*/
+
+#author {
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-right: 1.2em;
+  margin: auto;
+}
+
+.about-author-text {
+  margin-left: 100px;
+}
+
+.author-photo img {
+  object-fit: cover;
+  height: 500px;
+  width: 300px;
+  border-radius: 0;
+}
+
+.about-heading{
+  font-size: 36px;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+
 }
