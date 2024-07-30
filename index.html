@@ -6,6 +6,8 @@
     <title>Quote of the day</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--fontawesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   </head>
 
   <body>
@@ -19,8 +21,14 @@
             </div>
         <div class="quote-author" id="quoteAuthor">- Steve Jobs</div>
         <button id="new-quote" onclick="displayRandomQuote()">New Quote</button>
+        <button id="copy-quote" class="copy-quote-button">
+           Copy Quote <i class="fa-solid fa-copy"></i>
+        </button>
+        <div id="copy-message" class="copy-message" style="display: none;">Quote copied successfully!</div>
+
         </div>
         </div>
+
         <div class="card">
             <div class="quote">
             <h2 class="card-title">Fun Quotes</h2> <hr><br>

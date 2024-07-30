@@ -490,3 +490,21 @@ function displayRandomQuote() {
 }
 
 document.getElementById("new-quote").addEventListener("click", displayRandomQuote);
+
+//copy quote function
+function copyQuoteToClipboard(){
+    const quoteText = document.getElementById("quoteText").innerText;
+    navigator.clipboard.writeText(quoteText)
+    .then(() => {
+        const copyMessage = document.getElementById("copy-message");
+        copyMessage.style.display = "block";
+        setTimeout(() => {
+            copyMessage.style.display = "none";
+        }, 1500); // Hide the message after 1.5 seconds
+        })
+        .catch((error) => {
+            console.error("Error copying text!", error);
+        });
+}
+document.getElementById("new-quote").addEventListener("click", displayRandomQuote);
+document.getElementById("copy-quote").addEventListener("click", copyQuoteToClipboard);

@@ -108,6 +108,7 @@ main {
 
 #new-quote {
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
   color: #ffffff;
   cursor: pointer;
   background-color: #002ead;
@@ -120,7 +121,7 @@ main {
   border-radius: 6px;
 }
 
-#new-quote:hover {
+#new-quote:hover{
   background-color: #1045d6;
 }
 
@@ -131,6 +132,24 @@ main {
 
 .quote-author {
   font-style: italic;
+}
+
+.copy-quote-button {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.copy-quote-button:hover {
+  color: #1045d6;
+}
+
+.copy-message{
+  font-size: 14px;
 }
 
 .footline{
