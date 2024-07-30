@@ -86,6 +86,10 @@ main {
   border-radius: 6px;
 }
 
+#new-quote:hover {
+  background-color: #1045d6;
+}
+
 .quote-text {
   font-size: 18px;
   font-weight: 500;
