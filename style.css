@@ -105,7 +105,7 @@ main {
   color: #333;
 }
 
-#new-quote {
+#new-quote, #new-quote-fun {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: #ffffff;
@@ -120,20 +120,20 @@ main {
   border-radius: 6px;
 }
 
-#new-quote:hover {
+#new-quote:hover, #new-quote-fun:hover {
   background-color: #1045d6;
 }
 
-.quote-text {
+.quote-text, .fun-quote-text {
   font-size: 18px;
   font-weight: 500;
 }
 
-.quote-author {
+.quote-author, .fun-quote-author {
   font-style: italic;
 }
 
-.copy-quote-button {
+.copy-quote-button, .copy-fun-quote-button {
   font-family: poppins, Arial, Helvetica, sans-serif;
   background-color: transparent;
   border: transparent;
@@ -143,11 +143,11 @@ main {
   font-weight: 500;
 }
 
-.copy-quote-button:hover {
+.copy-quote-button:hover, .copy-fun-quote-button:hover {
   color: #1045d6;
 }
 
-.copy-message {
+.copy-message, .copy-fun-message {
   font-size: 14px;
 }
 
@@ -182,4 +182,50 @@ main {
   font-size: 36px;
   font-family: Raleway, Arial, Helvetica, sans-serif;
 
+}
+
+
+
+@media (max-width: 600px) {
+  main{
+  }
+ 
+  
+  .card {
+    width: 80%;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .card-title{
+    font-size: 18px;
+  }
+
+  .quote-text, .fun-quote-text, #new-quote, #new-quote-fun{
+    font-size: 14px;
+  }
+
+  .quote-author, .fun-quote-author{
+    font-size: 10px;
+  }
+
+ 
+  nav ul li a{
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .footline{
+    font-size: 10px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .card {
+      width: 48%;
+      margin: 1%;
+  }
 }

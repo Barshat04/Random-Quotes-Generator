@@ -479,8 +479,63 @@ const motivationalQuotes = [
     }
 ];
 
+const funQuotes = [
+    { quote: "I'm not arguing, I'm just explaining why I'm right.", author: "Unknown" },
+    { quote: "I'm on a whiskey diet. I've lost three days already.", author: "Tommy Cooper" },
+    { quote: "I intend to live forever. So far, so good.", author: "Steven Wright" },
+    { quote: "The elevator to success is out of order. You’ll have to use the stairs.", author: "Joe Girard" },
+    { quote: "I always arrive late at the office, but I make up for it by leaving early.", author: "Charles Lamb" },
+    { quote: "I am so clever that sometimes I don’t understand a single word of what I am saying.", author: "Oscar Wilde" },
+    { quote: "Why do they call it rush hour when nothing moves?", author: "Robin Williams" },
+    { quote: "I used to sell furniture for a living. The trouble was, it was my own.", author: "Les Dawson" },
+    { quote: "Insanity is hereditary; you get it from your children.", author: "Sam Levenson" },
+    { quote: "I’m writing a book. I’ve got the page numbers done.", author: "Steven Wright" },
+    { quote: "A day without laughter is a day wasted.", author: "Charlie Chaplin" },
+    { quote: "Why don't scientists trust atoms? Because they make up everything!", author: "Unknown" },
+    { quote: "Life is short. Smile while you still have teeth.", author: "Mallory Hopkins" },
+    { quote: "I haven't spoken to my wife in years. I didn't want to interrupt her.", author: "Rodney Dangerfield" },
+    { quote: "Behind every great man is a woman rolling her eyes.", author: "Jim Carrey" },
+    { quote: "I'm not crazy. My reality is just different from yours.", author: "Lewis Carroll" },
+    { quote: "I’m on a seafood diet. I see food, and I eat it.", author: "Unknown" },
+    { quote: "I’m not lazy, I’m just on energy-saving mode.", author: "Unknown" },
+    { quote: "Common sense is like deodorant. The people who need it most never use it.", author: "Bill Murray" },
+    { quote: "Wine is constant proof that God loves us and loves to see us happy.", author: "Benjamin Franklin" },
+    { quote: "If you think you are too small to be effective, you have never been in the dark with a mosquito.", author: "Betty Reese" },
+    { quote: "I love deadlines. I love the whooshing noise they make as they go by.", author: "Douglas Adams" },
+    { quote: "I’m not arguing, I’m just explaining why I’m right.", author: "Unknown" },
+    { quote: "I always wanted to be somebody, but now I realize I should have been more specific.", author: "Lily Tomlin" },
+    { quote: "I am only human, although I regret it.", author: "Mark Twain" },
+    { quote: "If at first you don't succeed, then skydiving definitely isn't for you.", author: "Steven Wright" },
+    { quote: "The secret of life is honesty and fair dealing. If you can fake that, you've got it made.", author: "Groucho Marx" },
+    { quote: "I'm not a complete idiot. Some pieces are missing.", author: "Unknown" },
+    { quote: "If you want your children to listen, try talking softly to someone else.", author: "Ann Landers" },
+    { quote: "I love my computer because all my friends live inside it.", author: "Unknown" },
+    { quote: "I’m not shy. I’m holding back my awesomeness so I don’t intimidate you.", author: "Unknown" },
+    { quote: "You know you're getting old when the candles cost more than the cake.", author: "Bob Hope" },
+    { quote: "I think I've discovered the secret of life – you just hang around until you get used to it.", author: "Charles M. Schulz" },
+    { quote: "I'm not superstitious, but I am a little stitious.", author: "Michael Scott" },
+    { quote: "Doing nothing is hard, you never know when you’re done.", author: "Unknown" },
+    { quote: "All you need is love. But a little chocolate now and then doesn't hurt.", author: "Charles M. Schulz" },
+    { quote: "A day without sunshine is like, you know, night.", author: "Steve Martin" },
+    { quote: "I drink to make other people more interesting.", author: "Ernest Hemingway" },
+    { quote: "I don’t suffer from insanity. I enjoy every minute of it.", author: "Unknown" },
+    { quote: "Never put off till tomorrow what you can do the day after tomorrow just as well.", author: "Mark Twain" },
+    { quote: "Why do we never see ads for hypnosis clinics? Because they don't work... or maybe they do.", author: "Unknown" },
+    { quote: "I can resist everything except temptation.", author: "Oscar Wilde" },
+    { quote: "If you think nobody cares if you're alive, try missing a couple of payments.", author: "Steven Wright" },
+    { quote: "Laziness is nothing more than the habit of resting before you get tired.", author: "Jules Renard" },
+    { quote: "We never really grow up, we only learn how to act in public.", author: "Bryan White" },
+    { quote: "If life gives you lemons, make lemonade. Then find someone whose life gives them vodka, and have a party.", author: "Ron White" },
+    { quote: "The road to success is dotted with many tempting parking spaces.", author: "Will Rogers" },
+    { quote: "I didn’t fail the test. I just found 100 ways to do it wrong.", author: "Benjamin Franklin" },
+    { quote: "A clear conscience is usually the sign of a bad memory.", author: "Steven Wright" },
+    { quote: "If you want your spouse to listen and pay strict attention to every word you say, talk in your sleep.", author: "Unknown" },
+    { quote: "I'm reading a book on anti-gravity. It's impossible to put down.", author: "Steven Wright" }
+];
+
 var randomNumber = Math.floor(Math.random());
 
+//motivational quote function
 function displayRandomQuote() {
     const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
     const randomQuote = motivationalQuotes[randomIndex];
@@ -491,7 +546,19 @@ function displayRandomQuote() {
 
 document.getElementById("new-quote").addEventListener("click", displayRandomQuote);
 
-//copy quote function
+//Fun quote function
+function displayRandomFunQuote() {
+    const randomIndex = Math.floor(Math.random() * funQuotes.length);
+    const randomQuote = funQuotes[randomIndex];
+
+    document.getElementById("funquoteText").innerText = `"${randomQuote.quote}"`;
+    document.getElementById("funquoteAuthor").innerText = `- ${randomQuote.author}`;
+}
+
+document.getElementById("new-quote-fun").addEventListener("click", displayRandomFunQuote);
+
+
+//copy motivational quote function
 function copyQuoteToClipboard(){
     const quoteText = document.getElementById("quoteText").innerText;
     navigator.clipboard.writeText(quoteText)
@@ -506,5 +573,23 @@ function copyQuoteToClipboard(){
             console.error("Error copying text!", error);
         });
 }
-document.getElementById("new-quote").addEventListener("click", displayRandomQuote);
 document.getElementById("copy-quote").addEventListener("click", copyQuoteToClipboard);
+
+
+
+//copy fun quote function
+function copyQuoteToClipboard(){
+    const quoteText = document.getElementById("funquoteText").innerText;
+    navigator.clipboard.writeText(quoteText)
+    .then(() => {
+        const copyMessage = document.getElementById("copy-fun-message");
+        copyMessage.style.display = "block";
+        setTimeout(() => {
+            copyMessage.style.display = "none";
+        }, 1500); // Hide the message after 1.5 seconds
+        })
+        .catch((error) => {
+            console.error("Error copying text!", error);
+        });
+}
+document.getElementById("copy-fun-quote").addEventListener("click", copyQuoteToClipboard);
