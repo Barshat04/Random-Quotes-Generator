@@ -228,7 +228,36 @@ main {
   .footline {
     font-size: 10px;
   }
+
+  #author {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .author-photo {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .author-photo img {
+    height: 300px;
+    width: 200px;
+  }
+
+  .about-author-text {
+    justify-content: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 1em;
+  }
+
+  .about-heading {
+    font-size: 22px;
+    text-align: center;
+  }
 }
+
 @media (min-width: 601px) and (max-width: 900px) {
   .card {
     width: 48%;
